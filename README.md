@@ -31,5 +31,12 @@ sfdx force:source:push -u myScratch
 sfdx force:source:pull -u myScratch
 ```
 
+* 開発準備用apex実行
+```
+# 権限セット設定
+sfdx force:apex:execute -f scripts/apex/setupPermissionSet.apex -u myScratch
+# サンプルデータ設定
+sfdx force:apex:execute -f scripts/apex/setupData.apex -u myScratch
+```
 
 
