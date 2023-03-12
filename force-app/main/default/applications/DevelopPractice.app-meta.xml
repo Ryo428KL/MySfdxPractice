@@ -16,5 +16,5 @@
     <tabs>SampleChild__c</tabs>
     <tabs>SampleGrandChild__c</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>UtilityBar</utilityBar>
+    <!-- <utilityBar>UtilityBar</utilityBar> -->
 </CustomApplication>
