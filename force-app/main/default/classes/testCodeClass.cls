@@ -1,6 +1,6 @@
-public with sharing class testCodeClass {
-    public static Integer testCodeMethod(){
-        System.debug('call testMethod');
-        return 1;
-    }
+global with sharing class testCodeClass {
+  public static Integer testCodeMethod(){
+    System.debug('call testMethod');
+    return 1;
+  }
 }

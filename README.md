@@ -39,7 +39,7 @@ sfdx force:apex:execute -f scripts/apex/setupPermissionSet.apex -u myScratch
 sfdx force:apex:execute -f scripts/apex/setupData.apex -u myScratch
 ```
 
-* 開発環境構築_スクリプト版
+* 開発環境構築_スクリプト版(スクラッチ環境作成～設定用Apex実行)
 ```
 sh scripts/preparation.sh myScratch
 ```
