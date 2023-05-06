@@ -43,3 +43,17 @@ sfdx force:apex:execute -f scripts/apex/setupData.apex -u myScratch
 ```
 sh scripts/preparation.sh myScratch
 ```
+
+* スクラッチ組織のパスワード生成
+```
+sfdx force:alias:list
+sfdx force:user:password:generate --targetusername <username>
+```
+
+* workbenchによるREST API実行
+```
+# 以下のURLから実行可能
+https://workbench.developerforce.com/login.php
+# REST Explorerを選択して以下でExecute
+/services/apexrest/<className>/<methodName>
+```
