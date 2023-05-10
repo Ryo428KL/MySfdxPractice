@@ -18,12 +18,12 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a myScratch
 ```
 * スクラッチ組織を開く
 ```
-sfdx force:org:open -u myScratch
+sfdx org open -o myScratch
 ```
 
 * 組織にソースをpushする
 ```
-sfdx force:source:push -u myScratch
+sfdx project deploy start -o myScratch
 ```
 
 * 組織からソースをpullする
@@ -46,7 +46,7 @@ sh scripts/preparation.sh myScratch
 
 * スクラッチ組織のパスワード生成
 ```
-sfdx force:alias:list
+sfdx org list
 sfdx force:user:password:generate --targetusername <username>
 ```
 
