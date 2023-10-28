@@ -7,36 +7,42 @@
   ![](img/step1.png)
 
 ## 準備(Git~)
-* プロジェクトをcloneする
+* プロジェクトをclone
+
+* 以下コマンドを実行する
+```
+npm install
+```
+
 * cloneしてきたディレクトリへ移動してDevHub組織を認証
 ```
-sfdx force:auth:web:login -r orgURL -d -a MyDevHub
+sf auth web login -r orgURL -d -a MyDevHub
 ```
 * スクラッチ組織作成
 ```
-sfdx force:org:create -s -f config/project-scratch-def.json -a myScratch
+sf org create scratch -f config/project-scratch-def.json -a myScratch
 ```
 * スクラッチ組織を開く
 ```
-sfdx org open -o myScratch
+sf org open -o myScratch
 ```
 
 * 組織にソースをpushする
 ```
-sfdx project deploy start -o myScratch
+sf project deploy start -o myScratch
 ```
 
 * 組織からソースをpullする
 ```
-sfdx force:source:pull -u myScratch
+sf project retrieve start -o myScratch
 ```
 
 * 開発準備用apex実行
 ```
 # 権限セット設定
-sfdx force:apex:execute -f scripts/apex/setupPermissionSet.apex -u myScratch
+sf apex run -f scripts/apex/setupPermissionSet.apex -o myScratch
 # サンプルデータ設定
-sfdx force:apex:execute -f scripts/apex/setupData.apex -u myScratch
+sf apex run -f scripts/apex/setupData.apex -o myScratch
 ```
 
 * 開発環境構築_スクリプト版(スクラッチ環境作成～設定用Apex実行)
@@ -46,8 +52,14 @@ sh scripts/preparation.sh myScratch
 
 * スクラッチ組織のパスワード生成
 ```
-sfdx org list
-sfdx force:user:password:generate --targetusername <username>
+sf org list
+sf org generate password -o <username>
+sf org display -o <orgName>
+```
+
+* スクラッチ組織の削除
+```
+sf org scratch delete -o <orgname>
 ```
 
 * workbenchによるREST API実行
