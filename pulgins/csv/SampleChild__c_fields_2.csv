@@ -1,0 +1,2 @@
+"fullName","label","type","restricted","values","valueSetName"
+"TestPiclList__c","サンプル選択リスト","Picklist","true","test3:項目3;test4:項目4",""
