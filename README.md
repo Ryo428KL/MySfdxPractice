@@ -47,7 +47,7 @@ sf apex run -f scripts/apex/setupData.apex -o myScratch
 
 * 開発環境構築_スクリプト版(スクラッチ環境作成～設定用Apex実行)
 ```
-sh scripts/preparation.sh myScratch
+sh scripts/preparation.sh MyDevHub myScratch
 ```
 
 * スクラッチ組織のパスワード生成

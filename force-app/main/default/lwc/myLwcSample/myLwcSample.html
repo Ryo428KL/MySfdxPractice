@@ -1,3 +1,32 @@
 <template>
-    
+  <lightning-card title="myLwcSample登録">
+    <lightning-layout multiple-rows="true">
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-input type="text" label="お名前" lwc:ref="Name"></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-button label="登録" onclick={register}></lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+  <lightning-card title="myLwcSample検索">
+    <lightning-layout multiple-rows="true">
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-input type="text" label="お名前(検索)" lwc:ref="searchName"></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-button label="検索" onclick={search}></lightning-button>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-datatable
+          key-field="Id"
+          data={searchData}
+          columns={columns}>
+        </lightning-datatable>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+  <lightning-card title="myLwcSampleChild(登録データ)">
+    <c-my-lwc-sample-child lwc:if={registeredData} account={registeredData}></c-my-lwc-sample-child>
+  </lightning-card>
 </template>
