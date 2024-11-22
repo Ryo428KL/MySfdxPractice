@@ -20,7 +20,7 @@ sf auth web login -r orgURL -d -a MyDevHub
 ```
 * スクラッチ組織作成
 ```
-sf org create scratch -f config/project-scratch-def.json -a myScratch
+sf org create scratch -f config/project-scratch-def.json -a myScratch -y 30
 ```
 * スクラッチ組織を開く
 ```
