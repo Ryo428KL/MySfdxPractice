@@ -14,3 +14,7 @@ package.xml
 # デフォルトで落ちてきて削除不可の資材をignoreする
 force-app/main/default/profiles/Admin.profile-meta.xml
 
+
+**/tsconfig.json
+
+**/*.ts
