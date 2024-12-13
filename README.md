@@ -92,3 +92,18 @@ sf kit object fields setup -s SampleChild__c -f pulgins/csv/SampleChild__c_field
 ```
 上記コマンド実行後、既存選択リスト値「test1:項目1」、「test2:項目2」は **ラベルがAPI参照名となり** 無効化された選択リスト値へ更新され、新規で「項目3:test3」、「項目4:test4」が作成される。
 
+## OAuth練習
+Auth0利用、下記を参考に実施
+https://www.macnica.co.jp/business/security/manufacturers/okta/tech_auth0_acfid.html
+
+```
+node node-app/app.js
+```
+
+別ターミナルでngrok
+```
+ngrok http 3000
+```
+
+表示されるURLでAPI登録
+
